@@ -9,7 +9,7 @@ use feature 'say';
 my %cars;
 
 $cars{'EV'}->{'KIA'}->{'NIRO'} = { 'year' => 2020 , 'battery_size' => 64, 'onboard_charger_rate' => 7.2 , 'aer' => 239 };
-$cars{'EV'}->{'TESLA'}->{'MODEL 3'} = { 'year' => 2021 , 'battery_size' => 82, 'onboard_charger_rate' => 7.2 , 'aer' => 322 };
+$cars{'EV'}->{'TESLA'}->{'MODEL 3'} = { 'year' => 2021 , 'battery_size' => 82, 'onboard_charger_rate' => 7.2 , 'aer' => 353 };
 $cars{'EV'}->{'CHEVY'}->{'BOLT'} = { 'year' => 2021 , 'battery_size' => 60, 'onboard_charger_rate' => 7.2 , 'aer' => 259 };
 
 my %electric_rate;

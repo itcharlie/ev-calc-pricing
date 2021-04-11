@@ -48,11 +48,11 @@ print "\n";
 #### Tesla Model 3 
 #
 say "Tesla Model 3 2021 Long Range: 82kwh battery pack";
-say "All Electric range: 322 miles";
+say "All Electric range: 353 miles";
 my $tesla_total_price = 82 * .13 ;
 my $tesla_total_price_fl = 82 * .07 ;
 my $tesla_charge_time = 82 / 7.2;  # 7.2 is the onboard charger rate ( it can also be 3.3 kwh  rate )  
-my $tesla_miles_per_kWh = 322 / 82;
+my $tesla_miles_per_kWh = 353 / 82;
 
 say "NYC Full charge price: \$ " .  sprintf("%.2f" , $tesla_total_price);
 say "FL Full charge price: \$ " .  sprintf("%.2f" , $tesla_total_price_fl);
