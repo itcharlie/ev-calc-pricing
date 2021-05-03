@@ -11,5 +11,6 @@ https://www.kiamedia.com/us/en/models/niro-ev/2020/specifications
 https://www.kiamedia.com/us/en/models/niro-phev/2020/specifications
 
 
-Averate Electric Rates by State source:
+Average Electric Rates by State source:
+
 https://paylesspower.com/blog/electric-rates-by-state/
