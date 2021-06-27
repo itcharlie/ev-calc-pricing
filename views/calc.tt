@@ -1,0 +1,33 @@
+
+<div id="page">
+      
+    <div id="content">
+        <div id="header">
+          <h1>EV Charging Calculator</h1>
+        </div>
+
+        <div id="calculator-form">
+           <form action="/" method="post">
+                <label for="aer">All Electric Range: </label><br>
+                <input type="text" id="aer" name="aer" value="<% aer %>" ><br>
+
+                <label for="battery_size"> Battery Capacity: </label><br>
+                <input type="text" id="battery_size" name="battery_size"  value="<% battery_size %>"><br>
+
+                <label for="obc">Onboard Charger Rate: </label><br>
+                <input type="text" id="obc" name="obc" value="<% obc %>"><br>
+
+                <input type="submit"  value="Calculate">
+
+           </form>
+        </div>      
+
+
+         <div id="state-price-chart">
+    <% FOREACH record IN state_rates %>
+      <p>State: <% record %> Electric Rate: <% record.electric_rate %> Total: <% record.total_price %></p>
+    <% END %>
+
+         </div>
+    </div>
+</div>
