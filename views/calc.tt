@@ -24,9 +24,15 @@
 
 
          <div id="state-price-chart">
-    <% FOREACH record IN state_rates %>
-      <p>State: <% record %> Electric Rate: <% record.electric_rate %> Total: <% record.total_price %></p>
-    <% END %>
+
+
+     <% IF state_rates %>
+
+          <% FOREACH state IN state_rates.keys.sort %>
+                    <p>State: <% state %> Electric Rate: <% state_rates.$state.electric_rate %> Total: <% state_rates.$state.total_price %></p>
+          <% END %>
+
+     <% END %>
 
          </div>
     </div>

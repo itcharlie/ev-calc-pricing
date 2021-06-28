@@ -20,18 +20,16 @@ post '/' => sub {
 
     my $state_rates_fh;
     my $state_rates = StateRates::get_state_rates();
-    my @rates = ();
+    my %rates;
     
     foreach my $state (sort keys %{$state_rates} )  {
            
         my $total_price = $battery_size  * ( $state_rates->{$state}->{'electric_rate' } / 100 ) ;
-        push @rates, {'state' => $state, 'rate' => $state_rates->{$state}->{'electric_rate' }, 'total_price' => sprintf("%.2f" , $total_price) };
+        $rates{$state} = { 'electric_rate' => $state_rates->{$state}->{'electric_rate' }, 'total_price' => sprintf("%.2f" , $total_price) };
 
     }
-
-   # die Dumper \@rates;
-
-    template 'calc' => {title => 'EVCalc', aer => $aer, battery_size => $battery_size , obc => $obc , state_rates => \@rates }
+    
+    template 'calc' => {title => 'EVCalc', aer => $aer, battery_size => $battery_size , obc => $obc , state_rates => \%rates }
 };
 
 true;
