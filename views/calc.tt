@@ -28,7 +28,7 @@
 
      <% IF state_rates %>
 
-     <table class="table">
+     <table class="table table-striped">
         <thead>
             <tr> 
                 <th scope="col"> State </th>
@@ -40,7 +40,7 @@
           <% FOREACH state IN state_rates.keys.sort %>
             <tr> 
                 <td> <% state %> </td>
-                <td>  $ <% state_rates.$state.electric_rate %> </td>
+                <td>  <% state_rates.$state.electric_rate %> &cent; </td>
                 <td>  $ <% state_rates.$state.total_price %> </td>
             </tr>
           <% END %>

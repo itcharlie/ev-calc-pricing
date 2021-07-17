@@ -1,0 +1,10 @@
+#page { background-color: aqua;}
+
+#content { 
+    background-color: beige;
+    margin:0 auto;
+    width: 50%;
+    border: 1px solid black;
+}
+#calculator-form { margin: 0 auto; width: 50%; }
+#state-price-chart { margin: 0 auto; width: 50%; }
