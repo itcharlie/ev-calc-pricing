@@ -1,4 +1,4 @@
-#page { background-color: aqua;}
+body { background-color: aqua !important; }
 
 #content { 
     background-color: beige;
@@ -6,5 +6,9 @@
     width: 50%;
     border: 1px solid black;
 }
+
 #calculator-form { margin: 0 auto; width: 50%; }
+
 #state-price-chart { margin: 0 auto; width: 50%; }
+
+.table { border: 1px solid black;}
