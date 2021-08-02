@@ -1,24 +1,25 @@
 
 <div id="page">
-      
+    <div id="header">
+      <h1>EV Charging Calculator</h1>
+    </div>
     <div id="content">
-        <div id="header">
-          <h1>EV Charging Calculator</h1>
-        </div>
+
 
         <div id="calculator-form">
            <form action="/" method="post">
+           <fieldset>
                 <label for="aer">All Electric Range: </label><br>
-                <input type="text" id="aer" name="aer" value="<% aer %>" ><br>
+                <input type="text" id="aer" name="aer" value="<% aer %>" > Miles<br>
 
                 <label for="battery_size"> Battery Capacity: </label><br>
-                <input type="text" id="battery_size" name="battery_size"  value="<% battery_size %>"><br>
+                <input type="text" id="battery_size" name="battery_size"  value="<% battery_size %>"> kWh<br>
 
                 <label for="obc">Onboard Charger Rate: </label><br>
-                <input type="text" id="obc" name="obc" value="<% obc %>"><br>
+                <input type="text" id="obc" name="obc" value="<% obc %>"> kW<br><br>
 
                 <input type="submit"  value="Calculate">
-
+           </fieldset>
            </form>
         </div>      
 
@@ -27,12 +28,12 @@
 
 
      <% IF state_rates %>
-
+     <h6> Calculations made with average electric rates from <a href="https://paylesspower.com/blog/electric-rates-by-state/"> January 2021 </a></h6>
      <table class="table table-striped">
         <thead>
             <tr> 
                 <th scope="col"> State </th>
-                <th scope="col"> Electric Rate </th>
+                <th scope="col"> Electric Rate per kWh</th>
                 <th scope="col"> Total </th>
             </tr>
         </thead>
