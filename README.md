@@ -1,5 +1,7 @@
 # ev-calc-pricing
-A Dancer App that will display cost of charging an ev by US State
+
+Dancer web app that will calculate cost of EV charging by US State.
+
 
 
 Average Electric Rates by State data source:
