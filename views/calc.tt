@@ -28,7 +28,21 @@
 
 
      <% IF state_rates %>
+<table class="table table-striped">
+    <tr>
+        <td> Charge time:</td>
+        <td> <% charge_time %> hours </td>
+    </tr>
+
+    <tr>
+        <td> Miles per Kwh:</td>
+        <td> <% miles_per_kWh %> miles</td>
+    </tr>
+
+</table>
+
      <h6> Calculations made with average electric rates from <a href="https://paylesspower.com/blog/electric-rates-by-state/"> January 2021 </a></h6>
+
      <table class="table table-striped">
         <thead>
             <tr> 
