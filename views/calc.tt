@@ -9,14 +9,14 @@
         <div id="calculator-form">
            <form action="/" method="post">
            <fieldset>
-                <label for="aer">All Electric Range: </label><br>
-                <input type="text" id="aer" name="aer" value="<% aer %>" > Miles<br>
+                <label for="aer">All Electric Range: </label>
+                <input type="text" id="aer" name="aer" value="<% aer %>" size="4"> Miles<br>
 
-                <label for="battery_size"> Battery Capacity: </label><br>
-                <input type="text" id="battery_size" name="battery_size"  value="<% battery_size %>"> kWh<br>
+                <label for="battery_size"> Battery Capacity: </label>
+                <input type="text" id="battery_size" name="battery_size"  value="<% battery_size %>" size="4" > kWh<br>
 
-                <label for="obc">Onboard Charger Rate: </label><br>
-                <input type="text" id="obc" name="obc" value="<% obc %>"> kW<br><br>
+                <label for="obc">Onboard Charger Rate: </label>
+                <input type="text" id="obc" name="obc" value="<% obc %>" size="4" > kW<br><br>
 
                 <input type="submit"  value="Calculate">
            </fieldset>
