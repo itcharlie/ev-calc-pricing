@@ -1,4 +1,4 @@
-#!C:\berrybrew\5.32.1_64\perl\bin\perl.exe
+#!/usr/bin/env perl
 BEGIN { $ENV{DANCER_APPHANDLER} = 'PSGI';}
 use Dancer2;
 use FindBin '$RealBin';
