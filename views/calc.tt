@@ -44,50 +44,54 @@
            </fieldset>
            </form>
 
-        </div> <!-- end of calculator-form -->      
+    </div> <!-- end of calculator-form -->      
 
 
-        <div id="state-price-chart" class="row">
+    <div id="state-price-chart" class="row">
 
 
-     <% IF state_rates %>
-<table class="table table-striped">
-    <tr>
-        <td> Charge time:</td>
-        <td> <% charge_time %> hours </td>
-    </tr>
-
-    <tr>
-        <td> Miles per Kwh:</td>
-        <td> <% miles_per_kWh %> miles</td>
-    </tr>
-
-</table>
-
-     <h6> Calculations made with average electric rates from <a href="https://paylesspower.com/blog/electric-rates-by-state/"> January 2021 </a></h6>
-
-     <table class="table table-striped">
-        <thead>
-            <tr> 
-                <th scope="col"> State </th>
-                <th scope="col"> Electric Rate per kWh</th>
-                <th scope="col"> Total </th>
+    <% IF state_rates %>
+        <table class="table table-striped">
+            <tr>
+                <td> Charge time:</td>
+                <td> <% charge_time %> hours </td>
             </tr>
-        </thead>
-        <tbody>
-          <% FOREACH state IN state_rates.keys.sort %>
-            <tr> 
-                <td> <% state %> </td>
-                <td>  <% state_rates.$state.electric_rate %> &cent; </td>
-                <td>  $ <% state_rates.$state.total_price %> </td>
-            </tr>
-          <% END %>
 
-        </tbody>
-     </table>
+            <tr>
+                <td> Miles per Kwh:</td>
+                <td> <% miles_per_kWh %> miles</td>
+            </tr>
+
+        </table>
+
+        <h6> Calculations made with average electric rates from <a href="https://paylesspower.com/blog/electric-rates-by-state/"> January 2021 </a></h6>
+
+        <table class="table table-striped">
+            <thead>
+                <tr> 
+                    <th scope="col"> State </th>
+                    <th scope="col"> Electric Rate per kWh</th>
+                    <th scope="col"> Total </th>
+                </tr>
+            </thead>
+            <tbody>
+            <% FOREACH state IN state_rates.keys.sort %>
+                <tr> 
+                    <td> <% state %> </td>
+                    <td>  <% state_rates.$state.electric_rate %> &cent; </td>
+                    <td>  $ <% state_rates.$state.total_price %> </td>
+                </tr>
+            <% END %>
+
+            </tbody>
+        </table>
      <% END %>
 
-        </div> <!-- state-price-chart -->
+    </div> <!-- state-price-chart -->
+
+    <div id="footer">
+        Powered by <a href="http://perldancer.org/">Dancer2</a> <% dancer_version %>
+    </div>
 
 </div> <!-- end of content -->
 

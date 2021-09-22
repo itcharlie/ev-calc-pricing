@@ -14,8 +14,12 @@ body {
     margin-top:10px;
     margin-bottom:10px;
     border-radius: 5px;
-    text-align:center;
     color:brown;
+}
+#header h1{
+ width:50%;
+ margin:0 auto;
+ text-align:center;
 }
 
 #footer{
@@ -33,12 +37,41 @@ body {
     margin: 0 auto; 
     width: 100%; 
     background-color: beige;
-    margin:0 auto;
-    width: 80%;
     border: 1px solid black;
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: bold;
+}
 
+#calculator-form form{ 
+    margin: 0 auto; 
+    width: 50%; 
+}
+
+
+#state-price-chart { 
+    margin: 0 auto; 
+    width: 100%; 
+    background-color: beige;
+    margin:0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-top:10px;
+    font-size: 12px;
+}
+
+#state-price-chart table { 
+    margin: 0 auto; 
+    width: 80%; 
+}
+
+#state-price-chart h6 { 
+    margin: 0 auto; 
+    width: 40%; 
+    margin-bottom:5px;
+    margin-top:5px;
 }
