@@ -3,20 +3,13 @@ body {
 }
 
 #content { 
-    background-color: beige;
-    margin:0 auto;
-    width: 50%;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
+	width:100%;
 }
 
 #header{
     margin:0 auto; 
     background-color: beige;
-    width: 50%;
+    width: 100%;
     border: 1px solid black;
     margin-top:10px;
     margin-bottom:10px;
@@ -28,7 +21,7 @@ body {
 #footer{
     margin:0 auto; 
     background-color: beige;
-    width: 50%;
+    width: 100%;
     border: 1px solid black;
     margin-top:10px;
     margin-bottom:10px;
@@ -38,15 +31,14 @@ body {
 
 #calculator-form { 
     margin: 0 auto; 
-    width: 50%; 
+    width: 100%; 
+    background-color: beige;
+    margin:0 auto;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+
 }
-
-#state-price-chart { 
-    margin: 0 auto; 
-    width: 50%; 
-    margin-top:5px; 
-}
-
-.table { border: 1px solid black;}
-
-#calculator-form fieldset { display:inline}

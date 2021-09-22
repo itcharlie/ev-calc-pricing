@@ -1,30 +1,53 @@
 
-<div id="page">
-    <div id="header">
+<div id="content" class="container-fluid" >
+
+    <div id="header" class="row">
       <h1>EV Charging Calculator</h1>
-    </div>
-    <div id="content">
+    </div> <!-- end of header -->
 
-
-        <div id="calculator-form">
+    <div id="calculator-form" class="row">
            <form action="/" method="post">
+
            <fieldset>
+           <div class="row">
+                <div class="col-sm">
                 <label for="aer">All Electric Range: </label>
+                </div>
+                <div class="col-sm">
                 <input type="text" id="aer" name="aer" value="<% aer %>" size="4"> Miles<br>
+                </div>
+           </div>
 
+           <div class="row">
+                <div class="col-sm">
                 <label for="battery_size"> Battery Capacity: </label>
+                </div>
+
+                <div class="col-sm">
                 <input type="text" id="battery_size" name="battery_size"  value="<% battery_size %>" size="4" > kWh<br>
-
+                </div>
+           </div>
+                
+           <div class="row">
+                <div class="col-sm">
                 <label for="obc">Onboard Charger Rate: </label>
+                </div>
+                <div class="col-sm">
                 <input type="text" id="obc" name="obc" value="<% obc %>" size="4" > kW<br><br>
-
+                </div>
+           </div>
+           <div class="row">
+                <div class="col-sm">
                 <input type="submit"  value="Calculate">
+                </div>
+           </div>
            </fieldset>
            </form>
-        </div>      
+
+        </div> <!-- end of calculator-form -->      
 
 
-         <div id="state-price-chart">
+        <div id="state-price-chart" class="row">
 
 
      <% IF state_rates %>
@@ -64,6 +87,7 @@
      </table>
      <% END %>
 
-         </div>
-    </div>
-</div>
+        </div> <!-- state-price-chart -->
+
+</div> <!-- end of content -->
+
