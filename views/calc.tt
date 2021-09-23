@@ -46,11 +46,8 @@
 
     </div> <!-- end of calculator-form -->      
 
-
-    <div id="state-price-chart" class="row">
-
-
     <% IF state_rates %>
+    <div id="state-price-chart" class="row">
         <table class="table table-striped">
             <tr>
                 <td> Charge time:</td>
@@ -85,9 +82,8 @@
 
             </tbody>
         </table>
-     <% END %>
-
     </div> <!-- state-price-chart -->
+    <% END %>
 
     <div id="footer">
         Powered by <a href="http://perldancer.org/">Dancer2</a> <% dancer_version %>
