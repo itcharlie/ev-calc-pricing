@@ -7,6 +7,8 @@ Dancer web app that will calculate cost of EV charging by US State.
 Average Electric Rates by State data source:
 
 https://paylesspower.com/blog/electric-rates-by-state/
+https://www.eia.gov/electricity/data/state/  (  Average Price by State by Provider (EIA-861) 1990-2019 )
+https://www.eia.gov/petroleum/gasdiesel/
 
 
 Car Spec sources:
