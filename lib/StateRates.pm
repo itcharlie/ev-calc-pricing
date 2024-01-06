@@ -3,473 +3,313 @@ use strict;
 use warnings;
 
 my %state_rates = (
-    '2021' => {
-        'Louisiana ' => {
-                        'electric_rate' => '9.58'
-                        },
-        'Oklahoma ' => {
-                        'electric_rate' => '8.92'
-                        },
-        'Ohio ' => {
-                    'electric_rate' => '11.83'
+          'West Virginia' => {
+                               '2020' => '10.89',
+                               '2023' => '13.09',
+                               '2022' => '11.95',
+                               '2021' => '11.2'
+                             },
+          'Iowa' => {
+                      '2021' => '10.87',
+                      '2022' => '10.97',
+                      '2023' => '11.3',
+                      '2020' => '11.72'
                     },
-        'Minnesota ' => {
-                        'electric_rate' => '12.48'
+          'Kentucky' => {
+                          '2020' => '10.62',
+                          '2023' => '12.68',
+                          '2022' => '11.93',
+                          '2021' => '10.46'
                         },
-        'Arizona ' => {
-                        'electric_rate' => '11.7'
+          'Missouri' => {
+                          '2023' => '10.73',
+                          '2020' => '9.52',
+                          '2021' => '9.38',
+                          '2022' => '10.06'
+                        },
+          'South Dakota' => {
+                              '2020' => '10.67',
+                              '2023' => '11.25',
+                              '2022' => '11.03',
+                              '2021' => '10.99'
+                            },
+          'Pennsylvania' => {
+                              '2023' => '17.99',
+                              '2020' => '13.63',
+                              '2021' => '13.09',
+                              '2022' => '14.18'
+                            },
+          'Idaho' => {
+                       '2022' => '9.9',
+                       '2021' => '10.05',
+                       '2020' => '9.91',
+                       '2023' => '10.58'
+                     },
+          'California' => {
+                            '2021' => '21.43',
+                            '2022' => '23.6',
+                            '2023' => '26.45',
+                            '2020' => '19.93'
+                          },
+          'Mississippi' => {
+                             '2022' => '11.48',
+                             '2021' => '10.88',
+                             '2020' => '11.33',
+                             '2023' => '13.18'
+                           },
+          'Minnesota' => {
+                           '2022' => '12.71',
+                           '2021' => '12.48',
+                           '2020' => '12.49',
+                           '2023' => '13.08'
+                         },
+          'Rhode Island' => {
+                              '2021' => '23.41',
+                              '2022' => '23.56',
+                              '2023' => '28.96',
+                              '2020' => '24.23'
+                            },
+          'New Hampshire' => {
+                               '2021' => '18.93',
+                               '2022' => '21.27',
+                               '2023' => '31.72',
+                               '2020' => '19.9'
+                             },
+          'Florida' => {
+                         '2020' => '11.72',
+                         '2023' => '15.01',
+                         '2022' => '13.36',
+                         '2021' => '11.65'
+                       },
+          'South Carolina' => {
+                                '2022' => '12.73',
+                                '2021' => '11.99',
+                                '2020' => '12.26',
+                                '2023' => '13.99'
+                              },
+          'Nevada' => {
+                        '2023' => '16.81',
+                        '2020' => '11.98',
+                        '2021' => '11.53',
+                        '2022' => '12.94'
+                      },
+          'Kansas' => {
+                        '2023' => '12.97',
+                        '2020' => '11.82',
+                        '2021' => '11.87',
+                        '2022' => '12.52'
+                      },
+          'Oregon' => {
+                        '2022' => '10.86',
+                        '2021' => '11.01',
+                        '2020' => '10.69',
+                        '2023' => '12.04'
+                      },
+          'Montana' => {
+                         '2022' => '10.67',
+                         '2021' => '10.72',
+                         '2020' => '11.15',
+                         '2023' => '10.73'
+                       },
+          'Arkansas' => {
+                          '2022' => '10.33',
+                          '2021' => '9.42',
+                          '2020' => '9.83',
+                          '2023' => '11.42'
+                        },
+          'Wyoming' => {
+                         '2021' => '10.47',
+                         '2022' => '10.28',
+                         '2023' => '10.28',
+                         '2020' => '10.49'
+                       },
+          'Louisiana' => {
+                           '2021' => '9.58',
+                           '2022' => '11.2',
+                           '2023' => '11.94',
+                           '2020' => '9.05'
+                         },
+          'Wisconsin' => {
+                           '2020' => '14.31',
+                           '2023' => '16.05',
+                           '2022' => '14.81',
+                           '2021' => '14.05'
+                         },
+          'Delaware' => {
+                          '2021' => '11.77',
+                          '2022' => '12.24',
+                          '2023' => '14.18',
+                          '2020' => '12.17'
+                        },
+          'Arizona' => {
+                         '2020' => '11.68',
+                         '2023' => '12.62',
+                         '2022' => '12.37',
+                         '2021' => '11.7'
+                       },
+          'Connecticut' => {
+                             '2021' => '21.29',
+                             '2022' => '22.29',
+                             '2023' => '30.24',
+                             '2020' => '22.1'
+                           },
+          'Indiana' => {
+                         '2021' => '12.25',
+                         '2022' => '13.41',
+                         '2023' => '15.43',
+                         '2020' => '11.91'
+                       },
+          'Alaska' => {
+                        '2023' => '21.9',
+                        '2020' => '22.59',
+                        '2021' => '21.32',
+                        '2022' => '22.09'
+                      },
+          'North Dakota' => {
+                              '2020' => '9.01',
+                              '2023' => '9.91',
+                              '2022' => '9.44',
+                              '2021' => '9.44'
+                            },
+          'Maryland' => {
+                          '2020' => '13.42',
+                          '2023' => '15.87',
+                          '2022' => '13.41',
+                          '2021' => '12.61'
+                        },
+          'Colorado' => {
+                          '2021' => '12.14',
+                          '2022' => '13.59',
+                          '2023' => '14.2',
+                          '2020' => '11.74'
+                        },
+          'Vermont' => {
+                         '2021' => '18.38',
+                         '2022' => '19.34',
+                         '2023' => '19.95',
+                         '2020' => '19.27'
+                       },
+          'Maine' => {
+                       '2023' => '24.12',
+                       '2020' => '16.81',
+                       '2021' => '16.5',
+                       '2022' => '18.33'
+                     },
+          'Alabama' => {
+                         '2022' => '12.86',
+                         '2021' => '12.38',
+                         '2020' => '12.38',
+                         '2023' => '14.36'
+                       },
+          'Georgia' => {
+                         '2021' => '10.94',
+                         '2022' => '11.63',
+                         '2023' => '12.87',
+                         '2020' => '10.87'
+                       },
+          'Massachusetts' => {
+                               '2020' => '22.9',
+                               '2023' => '31.71',
+                               '2022' => '25.36',
+                               '2021' => '22.32'
+                             },
+          'Ohio' => {
+                      '2021' => '11.83',
+                      '2022' => '12.53',
+                      '2023' => '14.31',
+                      '2020' => '11.72'
                     },
-        'Utah ' => {
-                    'electric_rate' => '10.04'
-                    },
-        'Virginia ' => {
-                        'electric_rate' => '11.05'
+          'Illinois' => {
+                          '2021' => '12.3',
+                          '2022' => '13.12',
+                          '2023' => '16.04',
+                          '2020' => '12.63'
                         },
-        'Tennessee ' => {
-                        'electric_rate' => '10.36'
-                        },
-        'District Of Columbia ' => {
-                                    'electric_rate' => '12.26'
+          'District of Columbia' => {
+                                      '2020' => '12.38',
+                                      '2023' => '14.91',
+                                      '2022' => '13.23',
+                                      '2021' => '12.26'
                                     },
-        'Kentucky ' => {
-                        'electric_rate' => '10.46'
+          'Hawaii' => {
+                        '2020' => '31.7',
+                        '2023' => '44.96',
+                        '2022' => '37.61',
+                        '2021' => '30.55'
+                      },
+          'Michigan' => {
+                          '2021' => '16.92',
+                          '2022' => '17.11',
+                          '2023' => '17.99',
+                          '2020' => '15.74'
                         },
-        'New Jersey ' => {
-                            'electric_rate' => '16.18'
+          'North Carolina' => {
+                                '2020' => '11.01',
+                                '2023' => '12.67',
+                                '2022' => '10.88',
+                                '2021' => '10.6'
+                              },
+          'Texas' => {
+                       '2022' => '12.28',
+                       '2021' => '11.39',
+                       '2020' => '11.73',
+                       '2023' => '14.18'
+                     },
+          'Washington' => {
+                            '2022' => '9.92',
+                            '2021' => '9.76',
+                            '2020' => '9.43',
+                            '2023' => '10.48'
+                          },
+          'Virginia' => {
+                          '2020' => '11.68',
+                          '2023' => '14.03',
+                          '2022' => '12.1',
+                          '2021' => '11.05'
                         },
-        'Wisconsin ' => {
-                        'electric_rate' => '14.05'
+          'New Jersey' => {
+                            '2021' => '16.18',
+                            '2022' => '16.33',
+                            '2023' => '16.92',
+                            '2020' => '15.43'
+                          },
+          'Nebraska' => {
+                          '2021' => '9.41',
+                          '2022' => '9.43',
+                          '2023' => '9.35',
+                          '2020' => '9.59'
                         },
-        'Wyoming ' => {
-                        'electric_rate' => '10.47'
+          'Utah' => {
+                      '2022' => '10.27',
+                      '2021' => '10.04',
+                      '2020' => '10.09',
+                      '2023' => '10.66'
                     },
-        'South Dakota ' => {
-                            'electric_rate' => '10.99'
-                            },
-        'Alaska ' => {
-                        'electric_rate' => '21.32'
-                    },
-        'New Hampshire ' => {
-                            'electric_rate' => '18.93'
-                            },
-        'Colorado ' => {
-                        'electric_rate' => '12.14'
+          'Oklahoma' => {
+                          '2020' => '9.05',
+                          '2023' => '10.96',
+                          '2022' => '10.16',
+                          '2021' => '8.92'
                         },
-        'Idaho ' => {
-                    'electric_rate' => '10.05'
-                    },
-        'Alabama ' => {
-                        'electric_rate' => '12.38'
-                    },
-        'Iowa ' => {
-                    'electric_rate' => '10.87'
-                    },
-        'Washington ' => {
-                            'electric_rate' => '9.76'
+          'New York' => {
+                          '2023' => '23.57',
+                          '2020' => '17.55',
+                          '2021' => '18.27',
+                          '2022' => '21.02'
                         },
-        'Illinois ' => {
-                        'electric_rate' => '12.3'
-                        },
-        'Vermont ' => {
-                        'electric_rate' => '18.38'
-                    },
-        'Indiana ' => {
-                        'electric_rate' => '12.25'
-                    },
-        'New Mexico ' => {
-                            'electric_rate' => '12.53'
-                        },
-        'Connecticut ' => {
-                            'electric_rate' => '21.29'
-                        },
-        'South Carolina ' => {
-                                'electric_rate' => '11.99'
-                            },
-        'Delaware ' => {
-                        'electric_rate' => '11.77'
-                        },
-        'California ' => {
-                            'electric_rate' => '21.43'
-                        },
-        'Florida ' => {
-                        'electric_rate' => '11.65'
-                    },
-        'Arkansas ' => {
-                        'electric_rate' => '9.42'
-                        },
-        'Massachusetts ' => {
-                            'electric_rate' => '22.32'
-                            },
-        'Missouri ' => {
-                        'electric_rate' => '9.38'
-                        },
-        'Oregon ' => {
-                        'electric_rate' => '11.01'
-                    },
-        'New York ' => {
-                        'electric_rate' => '18.27'
-                        },
-        'Montana ' => {
-                        'electric_rate' => '10.72'
-                    },
-        'Rhode Island ' => {
-                            'electric_rate' => '23.41'
-                            },
-        'Nevada ' => {
-                        'electric_rate' => '11.53'
-                    },
-        'Nebraska ' => {
-                        'electric_rate' => '9.41'
-                        },
-        'Maryland ' => {
-                        'electric_rate' => '12.61'
-                        },
-        'Mississippi ' => {
-                            'electric_rate' => '10.88'
-                        },
-        'North Dakota ' => {
-                            'electric_rate' => '9.44'
-                            },
-        'West Virginia ' => {
-                            'electric_rate' => '11.2'
-                            },
-        'Maine ' => {
-                    'electric_rate' => '16.5'
-                    },
-        'Michigan ' => {
-                        'electric_rate' => '16.92'
-                        },
-        'Kansas ' => {
-                        'electric_rate' => '11.87'
-                    },
-        'Texas ' => {
-                    'electric_rate' => '11.39'
-                    },
-        'North Carolina ' => {
-                                'electric_rate' => '10.6'
-                            },
-        'Hawaii ' => {
-                        'electric_rate' => '30.55'
-                    },
-        'Pennsylvania ' => {
-                            'electric_rate' => '13.09'
-                            },
-        'Georgia ' => {
-                        'electric_rate' => '10.94'
-                    }
-    },
+          'Tennessee' => {
+                           '2023' => '12.11',
+                           '2020' => '10.84',
+                           '2021' => '10.36',
+                           '2022' => '11.5'
+                         },
+          'New Mexico' => {
+                            '2021' => '12.53',
+                            '2022' => '13.11',
+                            '2023' => '13.53',
+                            '2020' => '12.08'
+                          }
 
-    '2022' => {
-        'Louisiana ' => {
-                        'electric_rate' => '11.2'
-                        },
-        'Oklahoma ' => {
-                        'electric_rate' => '10.16'
-                        },
-        'Ohio ' => {
-                    'electric_rate' => '12.53'
-                    },
-        'Minnesota ' => {
-                        'electric_rate' => '12.71'
-                        },
-        'Arizona ' => {
-                        'electric_rate' => '12.37'
-                    },
-        'Utah ' => {
-                    'electric_rate' => '10.27'
-                    },
-        'Virginia ' => {
-                        'electric_rate' => '12.1'
-                        },
-        'Tennessee ' => {
-                        'electric_rate' => '11.5'
-                        },
-        'District Of Columbia ' => {
-                                    'electric_rate' => '13.23'
-                                    },
-        'Kentucky ' => {
-                        'electric_rate' => '11.93'
-                        },
-        'New Jersey ' => {
-                            'electric_rate' => '16.33'
-                        },
-        'Wisconsin ' => {
-                        'electric_rate' => '14.81'
-                        },
-        'Wyoming ' => {
-                        'electric_rate' => '10.28'
-                    },
-        'South Dakota ' => {
-                            'electric_rate' => '11.03'
-                            },
-        'Alaska ' => {
-                        'electric_rate' => '22.09'
-                    },
-        'New Hampshire ' => {
-                            'electric_rate' => '21.27'
-                            },
-        'Colorado ' => {
-                        'electric_rate' => '13.59'
-                        },
-        'Idaho ' => {
-                    'electric_rate' => '9.9'
-                    },
-        'Alabama ' => {
-                        'electric_rate' => '12.86'
-                    },
-        'Iowa ' => {
-                    'electric_rate' => '10.97'
-                    },
-        'Washington ' => {
-                            'electric_rate' => '9.92'
-                        },
-        'Illinois ' => {
-                        'electric_rate' => '13.12'
-                        },
-        'Vermont ' => {
-                        'electric_rate' => '19.34'
-                    },
-        'Indiana ' => {
-                        'electric_rate' => '13.41'
-                    },
-        'New Mexico ' => {
-                            'electric_rate' => '13.11'
-                        },
-        'Connecticut ' => {
-                            'electric_rate' => '22.29'
-                        },
-        'South Carolina ' => {
-                                'electric_rate' => '12.73'
-                            },
-        'Delaware ' => {
-                        'electric_rate' => '12.24'
-                        },
-        'California ' => {
-                            'electric_rate' => '23.6'
-                        },
-        'Florida ' => {
-                        'electric_rate' => '13.36'
-                    },
-        'Arkansas ' => {
-                        'electric_rate' => '10.33'
-                        },
-        'Massachusetts ' => {
-                            'electric_rate' => '25.36'
-                            },
-        'Missouri ' => {
-                        'electric_rate' => '10.06'
-                        },
-        'Oregon ' => {
-                        'electric_rate' => '10.86'
-                    },
-        'New York ' => {
-                        'electric_rate' => '21.02'
-                        },
-        'Montana ' => {
-                        'electric_rate' => '10.67'
-                    },
-        'Rhode Island ' => {
-                            'electric_rate' => '23.56'
-                            },
-        'Nevada ' => {
-                        'electric_rate' => '12.94'
-                    },
-        'Nebraska ' => {
-                        'electric_rate' => '9.43'
-                        },
-        'Maryland ' => {
-                        'electric_rate' => '13.41'
-                        },
-        'Mississippi ' => {
-                            'electric_rate' => '11.48'
-                        },
-        'North Dakota ' => {
-                            'electric_rate' => '9.44'
-                            },
-        'West Virginia ' => {
-                            'electric_rate' => '11.95'
-                            },
-        'Maine ' => {
-                    'electric_rate' => '18.33'
-                    },
-        'Michigan ' => {
-                        'electric_rate' => '17.11'
-                        },
-        'Kansas ' => {
-                        'electric_rate' => '12.52'
-                    },
-        'Texas ' => {
-                    'electric_rate' => '12.28'
-                    },
-        'North Carolina ' => {
-                                'electric_rate' => '10.88'
-                            },
-        'Hawaii ' => {
-                        'electric_rate' => '37.61'
-                    },
-        'Pennsylvania ' => {
-                            'electric_rate' => '14.18'
-                            },
-        'Georgia ' => {
-                        'electric_rate' => '11.63'
-                    }
-    },
-    '2023' => {
-        'Louisiana ' => {
-                        'electric_rate' => '11.94'
-                        },
-        'Oklahoma ' => {
-                        'electric_rate' => '10.96'
-                        },
-        'Ohio ' => {
-                    'electric_rate' => '14.31'
-                    },
-        'Minnesota ' => {
-                        'electric_rate' => '13.08'
-                        },
-        'Arizona ' => {
-                        'electric_rate' => '12.62'
-                    },
-        'Utah ' => {
-                    'electric_rate' => '10.66'
-                    },
-        'Virginia ' => {
-                        'electric_rate' => '14.03'
-                        },
-        'Tennessee ' => {
-                        'electric_rate' => '12.11'
-                        },
-        'District Of Columbia ' => {
-                                    'electric_rate' => '14.91'
-                                    },
-        'Kentucky ' => {
-                        'electric_rate' => '12.68'
-                        },
-        'New Jersey ' => {
-                            'electric_rate' => '16.92'
-                        },
-        'Wisconsin ' => {
-                        'electric_rate' => '16.05'
-                        },
-        'Wyoming ' => {
-                        'electric_rate' => '10.28'
-                    },
-        'South Dakota ' => {
-                            'electric_rate' => '11.25'
-                            },
-        'Alaska ' => {
-                        'electric_rate' => '21.9'
-                    },
-        'New Hampshire ' => {
-                            'electric_rate' => '31.72'
-                            },
-        'Colorado ' => {
-                        'electric_rate' => '14.2'
-                        },
-        'Idaho ' => {
-                    'electric_rate' => '10.58'
-                    },
-        'Alabama ' => {
-                        'electric_rate' => '14.36'
-                    },
-        'Iowa ' => {
-                    'electric_rate' => '11.3'
-                    },
-        'Washington ' => {
-                            'electric_rate' => '10.48'
-                        },
-        'Illinois ' => {
-                        'electric_rate' => '16.04'
-                        },
-        'Vermont ' => {
-                        'electric_rate' => '19.95'
-                    },
-        'Indiana ' => {
-                        'electric_rate' => '15.43'
-                    },
-        'New Mexico ' => {
-                            'electric_rate' => '13.53'
-                        },
-        'Connecticut ' => {
-                            'electric_rate' => '30.24'
-                        },
-        'South Carolina ' => {
-                                'electric_rate' => '13.99'
-                            },
-        'Delaware ' => {
-                        'electric_rate' => '14.18'
-                        },
-        'California ' => {
-                            'electric_rate' => '26.45'
-                        },
-        'Florida ' => {
-                        'electric_rate' => '15.01'
-                    },
-        'Arkansas ' => {
-                        'electric_rate' => '11.42'
-                        },
-        'Massachusetts ' => {
-                            'electric_rate' => '31.71'
-                            },
-        'Missouri ' => {
-                        'electric_rate' => '10.73'
-                        },
-        'Oregon ' => {
-                        'electric_rate' => '12.04'
-                    },
-        'New York ' => {
-                        'electric_rate' => '23.57'
-                        },
-        'Montana ' => {
-                        'electric_rate' => '10.73'
-                    },
-        'Rhode Island ' => {
-                            'electric_rate' => '28.96'
-                            },
-        'Nevada ' => {
-                        'electric_rate' => '12.94'
-                    },
-        'Nebraska ' => {
-                        'electric_rate' => '9.35'
-                        },
-        'Maryland ' => {
-                        'electric_rate' => '15.87'
-                        },
-        'Mississippi ' => {
-                            'electric_rate' => '13.18'
-                        },
-        'North Dakota ' => {
-                            'electric_rate' => '9.91'
-                            },
-        'West Virginia ' => {
-                            'electric_rate' => '13.09'
-                            },
-        'Maine ' => {
-                    'electric_rate' => '24.12'
-                    },
-        'Michigan ' => {
-                        'electric_rate' => '17.99'
-                        },
-        'Kansas ' => {
-                        'electric_rate' => '12.97'
-                    },
-        'Texas ' => {
-                    'electric_rate' => '14.18'
-                    },
-        'North Carolina ' => {
-                                'electric_rate' => '12.67'
-                            },
-        'Hawaii ' => {
-                        'electric_rate' => '44.96'
-                    },
-        'Pennsylvania ' => {
-                            'electric_rate' => '17.99'
-                            },
-        'Georgia ' => {
-                        'electric_rate' => '12.87'
-                    }
-	
-	}
 );
 
 
@@ -478,4 +318,3 @@ my %state_rates = (
 sub get_state_rates {
     return  \%state_rates;
 };
-
