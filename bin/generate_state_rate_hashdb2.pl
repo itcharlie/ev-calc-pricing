@@ -24,5 +24,15 @@ while (<$state_rates_fh> ) {
     $electric_rate{ $line_data[0] }{2020}= $line_data[4] ;
 }
 
-print Dumper(\%electric_rate);
+print "my %state_rates = (\n";
 
+foreach my $state_name (sort {lc $a cmp lc $b} keys %electric_rate ) {
+    print "\t'" . $state_name . "'" . " => {\n";
+    print "\t\t\t" . "'2020' => '" . $electric_rate{$state_name}{2020} . "',\n" ;
+    print "\t\t\t" . "'2021' => '" . $electric_rate{$state_name}{2021} . "',\n" ;
+    print "\t\t\t" . "'2022' => '" . $electric_rate{$state_name}{2022} . "',\n" ;
+    print "\t\t\t" . "'2023' => '" . $electric_rate{$state_name}{2023} . "'\n" ;
+    print "\t\t\t\},\n";
+
+};
+print ")\n";
